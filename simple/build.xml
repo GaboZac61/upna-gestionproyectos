@@ -8,7 +8,7 @@
     </target>
     <target name="compile" description="Compilar el código java a un archivo class">
         <mkdir dir="classes"/>
-        <javac srcdir="./src/main/java/com/weather/simpleapp/" destdir="classes"/>
+        <javac srcdir="./src/main/java/simple/" destdir="classes"/>
     </target>
     <target name="jar" depends="compile" description="Crear un archivo Jar para la aplicación">
         <jar destfile="ControlClimateWheater.jar">

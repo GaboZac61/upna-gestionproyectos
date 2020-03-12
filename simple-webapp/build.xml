@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
-<project name="ControlClimateWheater_WebApp" default="compile">
+<project name="ControlClimateWheater" default="compile">
     <target name="clean" description="Borrar archivos temporales generados">
         <delete dir="classes"/>
     </target>
-    <target name="clobber" depends="clean" description="Eliminar todos los archivos artefacto">
+    <target name="clobber" depends="clean" description="eliminar todos los archivos artefacto">
         <delete file="ControlClimateWheater.jar"/>
     </target>
     <target name="compile" description="Compilar el código java a un archivo class">
         <mkdir dir="classes"/>
-        <javac srcdir="./src/main/java/simple-webapp/" destdir="classes"/>
+        <javac srcdir="./src/main/java/com/weather/simpleapp/" destdir="classes"/>
     </target>
     <target name="jar" depends="compile" description="Crear un archivo Jar para la aplicación">
-        <jar destfile="ControlClimateWheater_WebApp.jar">
+        <jar destfile="ControlClimateWheater.jar">
             <fileset dir="classes" includes="**/*.class"/>
             <manifest>
-                <attribute name="Main-Class" value="ControlWheater_WebApp"/>
+                <attribute name="Main-Class" value="ControlWheater"/>
             </manifest>
         </jar>
     </target>
